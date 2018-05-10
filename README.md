@@ -19,7 +19,12 @@ This module attempts to simplify the management of iptables with the [puppetlabs
 
 ### Setup Requirements
 
-There aren´t any. The required dependencies are pulled upon module install.
+Install the required modules:
+
+```
+https://github.com/puppetlabs/puppetlabs-firewall.git
+https://github.com/alexharv074/puppet-firewall_multi.git
+```
 
 ## Usage
 
