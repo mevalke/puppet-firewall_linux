@@ -22,8 +22,8 @@ This module attempts to simplify the management of iptables with the [puppetlabs
 Install the required modules:
 
 ```
-https://github.com/puppetlabs/puppetlabs-firewall.git
-https://github.com/alexharv074/puppet-firewall_multi.git
+git clone https://github.com/puppetlabs/puppetlabs-firewall.git
+git clone https://github.com/alexharv074/puppet-firewall_multi.git
 ```
 
 ## Usage
