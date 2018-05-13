@@ -28,15 +28,15 @@ git clone https://github.com/alexharv074/puppet-firewall_multi.git
 
 ## Usage
 
-Declaring the module and specifying the allowed SSH sources:
+Specifying the allowed SSH source addresses in hiera:
 
 ``` 
-class { 'firewall_linux':
-  ssh_access => [ '192.168.0.0/24' ]
-}
+firewall_linux_ssh_access:
+ - '172.16.98.0/24'
+ - '10.8.0.0/24'
 ```
 
-Inserting additional rules from within another module. For example accepting access to samba ports:
+Inserting additional rules from within another module. For example allowing access to samba ports:
 
 ```
 firewall_multi {'10 allow samba access':

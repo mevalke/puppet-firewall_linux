@@ -17,22 +17,18 @@
 #
 # Copyright 2018 Miikka Valkeapää
 #
-class firewall_linux (
-  $ssh_access
-){
+class firewall_linux {
+  $ssh_access = lookup(firewall_linux_ssh_access)
+
   resources { 'firewall':
     purge => true
   }
-	
   Firewall {
     before  => Class['firewall_linux::linux_post'],
     require => Class['firewall_linux::linux_pre'],
   }
-
   include firewall
-
   include firewall_linux::linux_pre
-
   include firewall_linux::linux_post
 }
 
